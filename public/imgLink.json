@@ -1,0 +1,22 @@
+[
+  {
+    "img": "https://res.cloudinary.com/dcmgay3nl/image/upload/v1715603576/bistro-boss/home/slide3_vcr6gn.jpg",
+    "name": "Soups",
+    "router": "/soups"
+  },
+  {
+    "img": "https://res.cloudinary.com/dcmgay3nl/image/upload/v1715603576/bistro-boss/home/slide4_glxjne.jpg",
+    "name": "Desserts",
+    "router": "/desserts"
+  },
+  {
+    "img": "https://res.cloudinary.com/dcmgay3nl/image/upload/v1715603573/bistro-boss/home/slide1_gqucx1.jpg",
+    "name": "Salads",
+    "router": "/salads"
+  },
+  {
+    "img": "https://res.cloudinary.com/dcmgay3nl/image/upload/v1715603572/bistro-boss/home/slide2_bb1c5j.jpg",
+    "name": "Pizzas",
+    "router": "/pizzas"
+  }
+]

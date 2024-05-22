@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Chicken Noodle Soup",
+    "price": 7.0,
+    "detail": "Classic soup with tender chicken, noodles, carrots, celery, and herbs.",
+    "image": "https://res.cloudinary.com/dcmgay3nl/image/upload/v1716196306/bistro-boss/From_our_menu/easy_chicken_noodle_soup_73271_16x9_zvfwhq.jpg"
+  },
+  {
+    "name": "Greek Salad",
+    "price": 9.0,
+    "detail": "Fresh cucumbers, tomatoes, olives, red onions, feta cheese, and Greek dressing.",
+    "image": "https://res.cloudinary.com/dcmgay3nl/image/upload/v1716195938/bistro-boss/From_our_menu/greek_salad_16407_16x9_kvbtke.jpg"
+  },
+  {
+    "name": "BBQ Chicken Pizza",
+    "price": 14.0,
+    "detail": "Pizza with BBQ sauce, grilled chicken, red onions, and cilantro.",
+    "image": "https://res.cloudinary.com/dcmgay3nl/image/upload/v1716195698/bistro-boss/From_our_menu/bbq-chicken-pizza-featured-c_lev9lw.jpg"
+  }
+]

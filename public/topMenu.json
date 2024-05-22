@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Chocolate Lava Cake",
+    "price": 6.5,
+    "detail": "A rich and decadent chocolate cake with a molten chocolate center, served warm with a scoop of vanilla ice cream.",
+    "image": "https://res.cloudinary.com/dcmgay3nl/image/upload/v1716193294/bistro-boss/From_our_menu/9fb682e290_vgvx9s.jpg"
+  },
+  {
+    "name": "Classic Tiramisu",
+    "price": 7.0,
+    "detail": "A traditional Italian dessert made with layers of coffee-soaked ladyfingers, mascarpone cheese, and cocoa powder.",
+    "image": "https://res.cloudinary.com/dcmgay3nl/image/upload/v1716193423/bistro-boss/From_our_menu/cde6add758_udfctq.jpg"
+  },
+  {
+    "name": "Margherita Pizza",
+    "price": 10.0,
+    "detail": "Classic pizza with fresh tomatoes, mozzarella cheese, and basil leaves.",
+    "image": "https://res.cloudinary.com/dcmgay3nl/image/upload/v1716195444/bistro-boss/From_our_menu/Classic_Margherita_Pizza_Recipe_kpwlqz.jpg"
+  },
+  {
+    "name": "Pepperoni Pizza",
+    "price": 12.0,
+    "detail": "A delicious pizza topped with spicy pepperoni slices and mozzarella cheese.",
+    "image": "https://res.cloudinary.com/dcmgay3nl/image/upload/v1716195560/bistro-boss/From_our_menu/unnamed_lpdscz.jpg"
+  },
+  {
+    "name": "BBQ Chicken Pizza",
+    "price": 14.0,
+    "detail": "Pizza with BBQ sauce, grilled chicken, red onions, and cilantro.",
+    "image": "https://res.cloudinary.com/dcmgay3nl/image/upload/v1716195698/bistro-boss/From_our_menu/bbq-chicken-pizza-featured-c_lev9lw.jpg"
+  },
+  {
+    "name": "Caesar Salad",
+    "price": 8.0,
+    "detail": "Crisp romaine lettuce, Parmesan cheese, croutons, and Caesar dressing.",
+    "image": "https://res.cloudinary.com/dcmgay3nl/image/upload/v1716195810/bistro-boss/From_our_menu/220905_DD_Chx-Caesar-Salad_051_zk93nw.jpg"
+  },
+  {
+    "name": "Greek Salad",
+    "price": 9.0,
+    "detail": "Fresh cucumbers, tomatoes, olives, red onions, feta cheese, and Greek dressing.",
+    "image": "https://res.cloudinary.com/dcmgay3nl/image/upload/v1716195938/bistro-boss/From_our_menu/greek_salad_16407_16x9_kvbtke.jpg"
+  },
+  {
+    "name": "Caprese Salad",
+    "price": 10.0,
+    "detail": "Sliced fresh mozzarella, tomatoes, and basil, seasoned with salt and olive oil.",
+    "image": "https://res.cloudinary.com/dcmgay3nl/image/upload/v1716196039/bistro-boss/From_our_menu/Caprese-Salad-1-scaled_kuc5tt.jpg"
+  },
+  {
+    "name": "Tomato Basil Soup",
+    "price": 6.0,
+    "detail": "Rich and creamy tomato soup infused with fresh basil leaves.",
+    "image": "https://res.cloudinary.com/dcmgay3nl/image/upload/v1716196231/bistro-boss/From_our_menu/download_4_w0miq4.jpg"
+  },
+  {
+    "name": "Chicken Noodle Soup",
+    "price": 7.0,
+    "detail": "Classic soup with tender chicken, noodles, carrots, celery, and herbs.",
+    "image": "https://res.cloudinary.com/dcmgay3nl/image/upload/v1716196306/bistro-boss/From_our_menu/easy_chicken_noodle_soup_73271_16x9_zvfwhq.jpg"
+  }
+]

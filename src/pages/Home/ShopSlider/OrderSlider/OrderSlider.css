@@ -1,0 +1,16 @@
+.img_container {
+  position: relative;
+  margin-bottom: 50px;
+}
+.img_container p {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: 50px;
+  bottom: 20px;
+  font-size: 28px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+}

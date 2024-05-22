@@ -1,0 +1,15 @@
+.shop_slider_container {
+  width: 100%;
+  height: 100vh;
+  min-height: 650px;
+  padding: 50px 50px;
+}
+
+.shop_slider_container {
+  margin-bottom: 50px;
+}
+
+.order_slider {
+  width: 800px;
+  margin: 0 auto;
+}

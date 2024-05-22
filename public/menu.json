@@ -1,0 +1,262 @@
+[
+  {
+    "category": "desserts",
+    "items": [
+      {
+        "name": "Chocolate Lava Cake",
+        "price": 6.5,
+        "detail": "A rich and decadent chocolate cake with a molten chocolate center, served warm with a scoop of vanilla ice cream.",
+        "image": "https://example.com/chocolatelavacake.jpg"
+      },
+      {
+        "name": "Classic Tiramisu",
+        "price": 7.0,
+        "detail": "A traditional Italian dessert made with layers of coffee-soaked ladyfingers, mascarpone cheese, and cocoa powder.",
+        "image": "https://example.com/tiramisu.jpg"
+      },
+      {
+        "name": "New York Cheesecake",
+        "price": 6.75,
+        "detail": "A creamy and smooth cheesecake with a graham cracker crust, served with a fresh strawberry topping.",
+        "image": "https://example.com/cheesecake.jpg"
+      },
+      {
+        "name": "Crème Brûlée",
+        "price": 7.25,
+        "detail": "A classic French dessert with a creamy custard base topped with a layer of hard caramelized sugar.",
+        "image": "https://example.com/cremebrulee.jpg"
+      },
+      {
+        "name": "Apple Pie",
+        "price": 5.5,
+        "detail": "A traditional apple pie with a flaky crust and a spiced apple filling, served warm with a scoop of vanilla ice cream.",
+        "image": "https://example.com/applepie.jpg"
+      },
+      {
+        "name": "Lemon Tart",
+        "price": 6.0,
+        "detail": "A tangy and sweet lemon curd filling in a buttery tart shell, topped with a dollop of whipped cream.",
+        "image": "https://example.com/lemontart.jpg"
+      },
+      {
+        "name": "Chocolate Mousse",
+        "price": 5.75,
+        "detail": "A light and airy chocolate mousse made with dark chocolate and topped with chocolate shavings.",
+        "image": "https://example.com/chocolatemousse.jpg"
+      },
+      {
+        "name": "Panna Cotta",
+        "price": 6.5,
+        "detail": "A creamy Italian dessert made with sweetened cream and vanilla, served with a berry compote.",
+        "image": "https://example.com/pannacotta.jpg"
+      },
+      {
+        "name": "Banoffee Pie",
+        "price": 6.25,
+        "detail": "A delicious pie made with layers of banana, toffee, and whipped cream on a biscuit base.",
+        "image": "https://example.com/banoffeepie.jpg"
+      },
+      {
+        "name": "Red Velvet Cake",
+        "price": 6.75,
+        "detail": "A classic red velvet cake with cream cheese frosting, moist and flavorful.",
+        "image": "https://example.com/redvelvetcake.jpg"
+      }
+    ]
+  },
+  {
+    "category": "pizza",
+    "items": [
+      {
+        "name": "Margherita Pizza",
+        "price": 10.0,
+        "detail": "Classic pizza with fresh tomatoes, mozzarella cheese, and basil leaves.",
+        "image": "https://example.com/images/margherita.jpg"
+      },
+      {
+        "name": "Pepperoni Pizza",
+        "price": 12.0,
+        "detail": "A delicious pizza topped with spicy pepperoni slices and mozzarella cheese.",
+        "image": "https://example.com/images/pepperoni.jpg"
+      },
+      {
+        "name": "BBQ Chicken Pizza",
+        "price": 14.0,
+        "detail": "Pizza with BBQ sauce, grilled chicken, red onions, and cilantro.",
+        "image": "https://example.com/images/bbqchicken.jpg"
+      },
+      {
+        "name": "Hawaiian Pizza",
+        "price": 13.0,
+        "detail": "A tropical pizza topped with ham, pineapple, and mozzarella cheese.",
+        "image": "https://example.com/images/hawaiian.jpg"
+      },
+      {
+        "name": "Veggie Supreme Pizza",
+        "price": 11.0,
+        "detail": "A healthy pizza loaded with bell peppers, olives, onions, mushrooms, and tomatoes.",
+        "image": "https://example.com/images/veggiesupreme.jpg"
+      },
+      {
+        "name": "Meat Lover's Pizza",
+        "price": 15.0,
+        "detail": "A hearty pizza with pepperoni, sausage, bacon, ham, and mozzarella cheese.",
+        "image": "https://example.com/images/meatlover.jpg"
+      },
+      {
+        "name": "Four Cheese Pizza",
+        "price": 13.5,
+        "detail": "A cheesy delight with mozzarella, cheddar, parmesan, and gorgonzola cheeses.",
+        "image": "https://example.com/images/fourcheese.jpg"
+      },
+      {
+        "name": "Buffalo Chicken Pizza",
+        "price": 14.0,
+        "detail": "Spicy pizza with buffalo sauce, grilled chicken, red onions, and mozzarella cheese.",
+        "image": "https://example.com/images/buffalochicken.jpg"
+      },
+      {
+        "name": "Mediterranean Pizza",
+        "price": 13.0,
+        "detail": "A flavorful pizza topped with feta cheese, olives, tomatoes, and spinach.",
+        "image": "https://example.com/images/mediterranean.jpg"
+      },
+      {
+        "name": "Pesto Pizza",
+        "price": 12.5,
+        "detail": "A fresh pizza with pesto sauce, cherry tomatoes, mozzarella, and basil.",
+        "image": "https://example.com/images/pesto.jpg"
+      }
+    ]
+  },
+  {
+    "category": "salads",
+    "items": [
+      {
+        "name": "Caesar Salad",
+        "price": 8.0,
+        "detail": "Crisp romaine lettuce, Parmesan cheese, croutons, and Caesar dressing.",
+        "image": "https://example.com/images/caesarsalad.jpg"
+      },
+      {
+        "name": "Greek Salad",
+        "price": 9.0,
+        "detail": "Fresh cucumbers, tomatoes, olives, red onions, feta cheese, and Greek dressing.",
+        "image": "https://example.com/images/greeksalad.jpg"
+      },
+      {
+        "name": "Caprese Salad",
+        "price": 10.0,
+        "detail": "Sliced fresh mozzarella, tomatoes, and basil, seasoned with salt and olive oil.",
+        "image": "https://example.com/images/capresesalad.jpg"
+      },
+      {
+        "name": "Cobb Salad",
+        "price": 11.0,
+        "detail": "Mixed greens topped with chicken, bacon, avocado, blue cheese, egg, and tomatoes.",
+        "image": "https://example.com/images/cobbsalad.jpg"
+      },
+      {
+        "name": "Quinoa Salad",
+        "price": 9.5,
+        "detail": "Quinoa with mixed greens, cucumbers, tomatoes, red onions, and a lemon vinaigrette.",
+        "image": "https://example.com/images/quinoasalad.jpg"
+      },
+      {
+        "name": "Waldorf Salad",
+        "price": 10.5,
+        "detail": "Fresh apples, grapes, celery, and walnuts on a bed of lettuce with a creamy dressing.",
+        "image": "https://example.com/images/waldorfsalad.jpg"
+      },
+      {
+        "name": "Spinach Salad",
+        "price": 8.5,
+        "detail": "Baby spinach, red onions, bacon, hard-boiled eggs, and mushrooms with a warm bacon dressing.",
+        "image": "https://example.com/images/spinachsalad.jpg"
+      },
+      {
+        "name": "Taco Salad",
+        "price": 12.0,
+        "detail": "Mixed greens with seasoned ground beef, cheddar cheese, tomatoes, and sour cream in a tortilla bowl.",
+        "image": "https://example.com/images/tacosalad.jpg"
+      },
+      {
+        "name": "Asian Chicken Salad",
+        "price": 11.0,
+        "detail": "Grilled chicken, mixed greens, mandarin oranges, almonds, and crispy noodles with sesame dressing.",
+        "image": "https://example.com/images/asianchickensalad.jpg"
+      },
+      {
+        "name": "Nicoise Salad",
+        "price": 12.5,
+        "detail": "Tuna, green beans, hard-boiled eggs, olives, and potatoes on a bed of mixed greens with vinaigrette.",
+        "image": "https://example.com/images/nicoisesalad.jpg"
+      }
+    ]
+  },
+  {
+    "category": "soup",
+    "items": [
+      {
+        "name": "Tomato Basil Soup",
+        "price": 6.0,
+        "detail": "Rich and creamy tomato soup infused with fresh basil leaves.",
+        "image": "https://example.com/images/tomatobasil.jpg"
+      },
+      {
+        "name": "Chicken Noodle Soup",
+        "price": 7.0,
+        "detail": "Classic soup with tender chicken, noodles, carrots, celery, and herbs.",
+        "image": "https://example.com/images/chickennoodle.jpg"
+      },
+      {
+        "name": "Minestrone Soup",
+        "price": 8.0,
+        "detail": "Hearty vegetable soup with beans, pasta, tomatoes, and Italian herbs.",
+        "image": "https://example.com/images/minestrone.jpg"
+      },
+      {
+        "name": "Lentil Soup",
+        "price": 6.5,
+        "detail": "Nutritious soup made with lentils, carrots, onions, and a blend of spices.",
+        "image": "https://example.com/images/lentilsoup.jpg"
+      },
+      {
+        "name": "Cream of Mushroom Soup",
+        "price": 7.5,
+        "detail": "Creamy soup with mushrooms, onions, garlic, and a hint of thyme.",
+        "image": "https://example.com/images/mushroomsoup.jpg"
+      },
+      {
+        "name": "Butternut Squash Soup",
+        "price": 8.5,
+        "detail": "Smooth and velvety soup made from roasted butternut squash and spices.",
+        "image": "https://example.com/images/butternutsquash.jpg"
+      },
+      {
+        "name": "Clam Chowder",
+        "price": 9.0,
+        "detail": "Rich and creamy chowder with clams, potatoes, onions, and celery.",
+        "image": "https://example.com/images/clamchowder.jpg"
+      },
+      {
+        "name": "French Onion Soup",
+        "price": 7.5,
+        "detail": "Savory soup with caramelized onions, beef broth, and melted cheese on top.",
+        "image": "https://example.com/images/frenchonion.jpg"
+      },
+      {
+        "name": "Vegetable Soup",
+        "price": 6.5,
+        "detail": "A medley of fresh vegetables simmered in a flavorful broth.",
+        "image": "https://example.com/images/vegetablesoup.jpg"
+      },
+      {
+        "name": "Potato Leek Soup",
+        "price": 7.0,
+        "detail": "Creamy soup with potatoes, leeks, onions, and a touch of cream.",
+        "image": "https://example.com/images/potatoleek.jpg"
+      }
+    ]
+  }
+]

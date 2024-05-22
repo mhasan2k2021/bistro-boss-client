@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Delicious Bistro",
+    "comment": "The food at Delicious Bistro is amazing! I especially loved their pasta dishes.",
+    "rating": 4
+  },
+  {
+    "name": "Sizzling Steaks",
+    "comment": "Had a fantastic dinner at Sizzling Steaks! The steak was cooked to perfection and the service was top-notch.",
+    "rating": 4
+  },
+  {
+    "name": "Spice Haven",
+    "comment": "I'm a huge fan of Indian cuisine and Spice Haven didn't disappoint! The flavors were authentic and the ambiance was great.",
+    "rating": 4
+  },
+  {
+    "name": "Taste of Italy",
+    "comment": "Taste of Italy is my go-to spot for Italian food. Their pizzas are simply irresistible!",
+    "rating": 4
+  },
+  {
+    "name": "Fresh Catch Seafood",
+    "comment": "Fresh Catch Seafood exceeded my expectations. The seafood was indeed fresh and the portions were generous.",
+    "rating": 4
+  }
+]

@@ -1,0 +1,14 @@
+.recommend_container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 50px 0;
+  margin: 0 auto;
+}
+
+.recommend_food_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}

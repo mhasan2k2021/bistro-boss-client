@@ -1,0 +1,17 @@
+.rating_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.rating_container label input[type="radio"] {
+  display: none;
+}
+
+.star {
+  cursor: pointer;
+  transition: 0.2s;
+}
