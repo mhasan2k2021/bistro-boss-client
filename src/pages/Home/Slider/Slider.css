@@ -1,6 +1,37 @@
 .slider {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   z-index: -3;
   margin-bottom: 100px;
+}
+
+/* this className "ul.thumbs.animated" i take from responsive react carousel */
+ul.thumbs.animated {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  /* this className "carousel-root" i take from responsive react carousel */
+  .carousel-root {
+    height: 350px;
+  }
+  .slider-wrapper {
+    height: 425px;
+  }
+  .slider {
+    min-height: auto;
+    /* height: 300px; */
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .carousel-root {
+    height: 350px;
+  }
+  .carousel {
+    height: 260px;
+  }
 }
