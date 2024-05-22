@@ -4,6 +4,7 @@
   font-weight: 500;
   color: #d99904;
   font-style: italic;
-  font-size: 24px;
+  font-size: min(max(3vw) 2.5vw);
+
   margin-bottom: 20px;
 }
