@@ -1,8 +1,9 @@
 .recommend_container {
   width: 100%;
-  min-height: 100vh;
+  height: 800px;
   padding: 50px 0;
   margin: 0 auto;
+  margin-bottom: 50px;
 }
 
 .recommend_food_container {
@@ -11,4 +12,21 @@
   align-items: center;
   justify-content: center;
   gap: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .recommend_container {
+    padding: 0;
+    height: 530px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .recommend_container {
+    height: inherit;
+    padding-top: 30px;
+  }
+  .recommend_food_container {
+    flex-direction: column;
+  }
 }

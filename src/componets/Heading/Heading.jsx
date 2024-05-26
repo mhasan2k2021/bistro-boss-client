@@ -1,9 +1,6 @@
 import "./Heading.css";
 
-const Heading = ({ heading, color }) => {
-  const style = {
-    color: color ? color : "",
-  };
+const Heading = ({ heading, style }) => {
   return (
     <h3 className={`order_heading `} style={style}>
       {heading}

@@ -37,3 +37,37 @@
   width: 760px;
   text-align: center;
 }
+
+@media screen and (max-width: 768px) {
+  .bistro_img {
+    height: 450px;
+  }
+
+  .boss_text {
+    width: 450px;
+  }
+  .boss_text h3 {
+    font-size: 28px;
+  }
+  .boss_text p {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .bistro_img {
+    height: 250px;
+    margin-bottom: 30px;
+  }
+  .boss_text {
+    width: 350px;
+    height: 200px;
+  }
+  .boss_text h3 {
+    font-size: 18px;
+  }
+  .boss_text p {
+    width: 300px;
+    font-size: 12px;
+  }
+}

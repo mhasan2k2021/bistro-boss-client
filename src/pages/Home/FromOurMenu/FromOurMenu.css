@@ -12,3 +12,12 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
 }
+
+@media screen and (max-width: 768px) {
+  .from_our_menu {
+    padding: 10px 0;
+  }
+  .top-menu {
+    grid-template-columns: 1fr;
+  }
+}

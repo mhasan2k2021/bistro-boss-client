@@ -53,3 +53,33 @@
   background-color: #1f2937;
   border-color: #1f2937;
 }
+
+@media screen and (max-width: 768px) {
+  .food_card {
+    width: 200px;
+    height: 340px;
+  }
+  .food_card_detail {
+    height: 140px;
+  }
+  .food_card_detail h6 {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+  .food_card_detail p {
+    font-size: 12px;
+    margin: 0;
+  }
+
+  .food_card_detail button {
+    width: 80px;
+    height: 30px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .food_card_detail p {
+    width: 80%;
+  }
+}

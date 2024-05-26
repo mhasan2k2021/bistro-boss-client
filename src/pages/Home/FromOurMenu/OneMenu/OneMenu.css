@@ -42,3 +42,44 @@
   font-weight: 500;
   color: #737373;
 }
+
+@media screen and (max-width: 768px) {
+  .name_price {
+    align-items: start;
+  }
+  .name_price h6 {
+    text-align: start;
+  }
+  .name_price p {
+    width: initial;
+  }
+  .detail {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .oneMenu {
+    row-gap: 12px;
+  }
+  .oneMenu img {
+    width: 80px;
+    height: 80px;
+  }
+  .menu_dash {
+    display: none;
+  }
+  .name_price h6 {
+    font-size: 14px;
+  }
+
+  .name_price p {
+    font-size: 14px;
+  }
+
+  .detail {
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 0;
+  }
+}

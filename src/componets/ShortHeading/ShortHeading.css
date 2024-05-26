@@ -4,7 +4,18 @@
   font-weight: 500;
   color: #d99904;
   font-style: italic;
-  font-size: min(max(3vw) 2.5vw);
-
+  font-size: 18px;
   margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .open_time {
+    font-size: 0.5em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .open_time {
+    font-size: 0.5em;
+  }
 }

@@ -15,8 +15,11 @@ ul.thumbs.animated {
 
 @media screen and (max-width: 768px) {
   /* this className "carousel-root" i take from responsive react carousel */
+  .carousel {
+    height: 360px;
+  }
   .carousel-root {
-    height: 350px;
+    height: 450px;
   }
   .slider-wrapper {
     height: 425px;
@@ -25,6 +28,9 @@ ul.thumbs.animated {
     min-height: auto;
     height: 500px;
     margin-bottom: 0px;
+  }
+  .control-next {
+    height: 340px;
   }
 }
 

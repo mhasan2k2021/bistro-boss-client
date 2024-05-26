@@ -14,7 +14,17 @@ h6 {
 }
 .comment h6 {
   font-family: var(--font-family);
-  font-size: 28;
   font-size: 28px;
   color: #b17d05;
+}
+
+@media screen and (max-width: 768px) {
+  .comment svg {
+    width: 50px;
+    margin: 0 auto;
+  }
+
+  .comment h6 {
+    font-size: 16px;
+  }
 }

@@ -3,6 +3,11 @@ import ShortHeading from "../../../componets/ShortHeading/ShortHeading";
 import "./CheckItOut.css";
 
 const CheckItOut = () => {
+  const windowWidth = window.innerWidth;
+  const style = {
+    color: "#fff",
+    marginBottom: "0",
+  };
   const img =
     "https://res.cloudinary.com/dcmgay3nl/image/upload/v1715603575/bistro-boss/home/featured_igjlti.jpg";
   return (
@@ -11,7 +16,7 @@ const CheckItOut = () => {
       <Heading
         heading="FROM OUR MENU"
         className="newHeading"
-        color="#fff"
+        style={style}
       ></Heading>
 
       <div className="getSome">

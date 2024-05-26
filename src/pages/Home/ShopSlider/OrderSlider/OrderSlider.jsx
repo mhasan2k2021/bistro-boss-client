@@ -16,14 +16,28 @@ const OrderSlider = () => {
   return (
     <>
       <Swiper
-        slidesPerView={3}
-        spaceBetween={10}
         autoplay={{
           delay: 2500,
           disableOnInteraction: true,
         }}
+        slidesPerView={3}
+        spaceBetween={10}
         pagination={{
           clickable: true,
+        }}
+        breakpoints={{
+          1000: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 50,
+          },
+          480: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+          },
         }}
         modules={[Pagination, Autoplay, Navigation]}
         className="mySwiper"

@@ -7,7 +7,9 @@ const OneMenu = ({ m }) => {
       <img src={image} alt="" />
       <div className="food_detail">
         <div className="name_price">
-          <h6>{name} ------------------</h6>
+          <h6>
+            {name} <span className="menu_dash">------------------</span>
+          </h6>
           <p>${price}</p>
         </div>
         {detail.length > 50 ? (
