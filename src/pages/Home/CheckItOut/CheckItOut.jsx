@@ -8,6 +8,7 @@ const CheckItOut = () => {
     color: "#fff",
     marginBottom: "0",
   };
+
   const img =
     "https://res.cloudinary.com/dcmgay3nl/image/upload/v1715603575/bistro-boss/home/featured_igjlti.jpg";
   return (
