@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import BistroBoss from "../BistroBoss/BistroBoss";
 import CheckItOut from "../CheckItOut/CheckItOut";
 import FromOurMenu from "../FromOurMenu/FromOurMenu";
@@ -9,6 +10,9 @@ import Testimonials from "../Testimonials/Testimonials";
 import "./Home.css";
 
 const Home = () => {
+  useEffect(() => {
+    document.title = "Home | Welcome Home";
+  }, []);
   return (
     <div className="home_container">
       <Slider></Slider>
