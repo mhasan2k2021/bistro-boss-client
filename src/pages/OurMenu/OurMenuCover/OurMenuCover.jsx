@@ -1,9 +1,12 @@
-import React from "react";
+import "./OurMenuCover.css";
 
 const OurMenuCover = () => {
   return (
-    <div>
-      <h3>this is our menu.</h3>
+    <div className="our_menu_cover">
+      <div className="our_menu_cover_heading">
+        <h3>OUR MENU</h3>
+        <p>Would you like to try a dish?</p>
+      </div>
     </div>
   );
 };

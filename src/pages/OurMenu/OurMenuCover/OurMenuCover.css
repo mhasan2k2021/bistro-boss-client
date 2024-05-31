@@ -1,0 +1,40 @@
+.our_menu_cover {
+  width: 100%;
+  height: 600px;
+  background: url("https://res.cloudinary.com/dcmgay3nl/image/upload/v1715603571/bistro-boss/menu/banner3_ilw9np.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.our_menu_cover_heading {
+  width: 600px;
+  height: 300px;
+  background-color: #15151580;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.our_menu_cover_heading h3 {
+  font-size: 60px;
+  font-family: var(--cinzel);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+  line-height: 60px;
+}
+
+.our_menu_cover_heading p {
+  font-size: 18px;
+  font-family: var(--cinzel);
+  font-weight: 500;
+  color: #fff;
+  line-height: 18px;
+}
