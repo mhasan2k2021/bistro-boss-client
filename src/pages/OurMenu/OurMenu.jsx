@@ -1,7 +1,9 @@
+import OurMenuCover from "./OurMenuCover/OurMenuCover";
+
 const OurMenu = () => {
   return (
     <div>
-      <h3>this is Our Menu</h3>
+      <OurMenuCover></OurMenuCover>
     </div>
   );
 };
