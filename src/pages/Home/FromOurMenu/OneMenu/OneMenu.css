@@ -28,12 +28,14 @@
   font-size: 20px;
   font-weight: 500;
   color: #151515;
+  text-align: left;
 }
 .name_price p {
   font-family: var(--font-family);
   font-size: 20px;
   font-weight: 500;
   color: #bb8506;
+  width: initial;
 }
 
 .detail {
@@ -41,6 +43,7 @@
   font-size: 16px;
   font-weight: 500;
   color: #737373;
+  text-align: left;
 }
 
 @media screen and (max-width: 768px) {
