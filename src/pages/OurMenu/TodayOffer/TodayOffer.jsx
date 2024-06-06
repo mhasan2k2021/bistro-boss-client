@@ -3,6 +3,7 @@ import Heading from "../../../componets/Heading/Heading";
 import ShortHeading from "../../../componets/ShortHeading/ShortHeading";
 import "./TodayOffer.css";
 import FoodList from "../../../componets/FoodList/FoodList";
+import FavButton from "../../../componets/FavButton/FavButton";
 
 const TodayOffer = () => {
   const [foods, setFoods] = useState([]);
@@ -23,7 +24,7 @@ const TodayOffer = () => {
           <FoodList key={index} food={food}></FoodList>
         ))}
       </div>
-      <button>ORDER YOUR FAVORITE FOOD</button>
+      <FavButton></FavButton>
     </div>
   );
 };

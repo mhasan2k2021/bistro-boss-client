@@ -1,10 +1,10 @@
 import "./MenuCover.css";
 
-const MenuCover = ({ title, about }) => {
+const MenuCover = ({ title, about, aboutStyle, titleStyle }) => {
   return (
     <div className="menu_cover">
-      <h3>{title}</h3>
-      <p>{about}</p>
+      <h3 style={titleStyle}>{title}</h3>
+      <p style={aboutStyle}>{about}</p>
     </div>
   );
 };
