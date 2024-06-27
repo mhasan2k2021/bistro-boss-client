@@ -25,3 +25,10 @@
   row-gap: 15px;
   margin-bottom: 30px;
 }
+
+@media screen and (max-width: 768px) {
+  .food_list {
+    grid-template-columns: 1fr;
+    padding: 0 30px;
+  }
+}

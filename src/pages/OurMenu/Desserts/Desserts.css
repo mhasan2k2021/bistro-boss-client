@@ -24,3 +24,14 @@
   row-gap: 15px;
   margin-bottom: 30px;
 }
+
+@media screen and (max-width: 768px) {
+  .dessert_img_container {
+    height: 400px;
+  }
+
+  .dessert_menu_list {
+    grid-template-columns: 1fr;
+    padding: 0 30px;
+  }
+}

@@ -15,15 +15,11 @@ const Desserts = () => {
       .then((res) => res.json())
       .then((data) => setFoods(data));
   }, []);
-  const aboutStyle = { fontSize: "12px", width: "450px" };
+
   return (
     <div className="dessert_section">
       <div className="dessert_img_container">
-        <MenuCover
-          title={title}
-          about={about}
-          aboutStyle={aboutStyle}
-        ></MenuCover>
+        <MenuCover title={title} about={about}></MenuCover>
       </div>
       <div className="dessert_menu_list">
         {foods.map((food, index) => (
