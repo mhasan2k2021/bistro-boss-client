@@ -1,7 +1,11 @@
+import OurShopImage from "./OurShopImage/OurShopImage";
+import ShopMenu from "./ShopMenu/ShopMenu";
+
 const OurShop = () => {
   return (
     <div>
-      <h3>this is Our Shop.</h3>
+      <OurShopImage></OurShopImage>
+      <ShopMenu></ShopMenu>
     </div>
   );
 };
