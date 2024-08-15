@@ -10,6 +10,7 @@ import Testimonials from "../Testimonials/Testimonials";
 import "./Home.css";
 
 const Home = () => {
+  // add dynamic title
   useEffect(() => {
     document.title = "Home | Welcome Home";
   }, []);
