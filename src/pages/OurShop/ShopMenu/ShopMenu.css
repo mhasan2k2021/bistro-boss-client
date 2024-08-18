@@ -1,0 +1,44 @@
+.shop_menu_section {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shop_menu_section ul {
+  width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-transform: uppercase;
+}
+
+.shop_menu_section ul li {
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--font-family);
+  transition: 0.2s;
+  position: relative;
+  padding: 0 5px;
+  font-weight: 600;
+}
+
+.shop_menu_section ul li::before {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: #bb8506;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.2s;
+}
+
+.shop_menu_section ul li:hover {
+  color: #bb8506;
+}
+
+.shop_menu_section ul li:hover::before {
+  width: 100%;
+}

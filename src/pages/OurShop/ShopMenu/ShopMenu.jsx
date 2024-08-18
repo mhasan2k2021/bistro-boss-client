@@ -2,8 +2,14 @@ import "./ShopMenu.css";
 
 const ShopMenu = () => {
   return (
-    <div>
-      <h3>this is our shop menu</h3>
+    <div className="shop_menu_section">
+      <ul>
+        <li>Salad</li>
+        <li>pizza</li>
+        <li>soups</li>
+        <li>desserts</li>
+        <li>drinks</li>
+      </ul>
     </div>
   );
 };
