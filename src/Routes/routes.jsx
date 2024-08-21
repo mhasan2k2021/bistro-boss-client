@@ -5,6 +5,8 @@ import Contact from "../pages/Contact/Contact";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import OurMenu from "../pages/OurMenu/OurMenu";
 import OurShop from "../pages/OurShop/OurShop";
+import Salad from "../pages/OurShop/ShopMenu/Salad/Salad";
+import Pizza from "../pages/OurMenu/Pizza/Pizza";
 
 export const router = createBrowserRouter([
   {
@@ -30,6 +32,16 @@ export const router = createBrowserRouter([
       {
         path: "/our-shop",
         element: <OurShop></OurShop>,
+        // children: [
+        //   {
+        //     path: "/salad",
+        //     element: <Salad></Salad>,
+        //   },
+        //   {
+        //     path: "/pizza",
+        //     element: <Pizza></Pizza>,
+        //   },
+        // ],
       },
     ],
   },
