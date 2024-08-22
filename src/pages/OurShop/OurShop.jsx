@@ -1,13 +1,14 @@
 import OurShopImage from "./OurShopImage/OurShopImage";
 import Products from "./Products/Products";
-import ShopMenu from "./ShopMenu/ShopMenu";
+import ProductsContainer from "./ShopMenu/ProductsContainer/ProductsContainer";
+import ShopMenu from "./ShopMenu/ShopMenu/ShopMenu";
 
 const OurShop = () => {
   return (
     <div>
       <OurShopImage></OurShopImage>
       <ShopMenu></ShopMenu>
-      <Products></Products>
+      <ProductsContainer></ProductsContainer>
     </div>
   );
 };

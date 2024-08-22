@@ -1,24 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { ShopMenuContext } from "../../../assets/context/ShopMenuContext";
+import "./Products.css";
 
-const Products = () => {
-  const [products, setProducts] = useState([]);
-
-  // this is for loading all products.
-
-  useEffect(() => {
-    fetch("../../../../public/products.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setProducts(data);
-        console.log(data);
-      });
-  }, []);
+const Products = ({ product }) => {
+  const { _id, name, recipe, image, category, price } = product;
 
   return (
-    <div>
-      {products.map((product) => (
-        <h3>{product.name}</h3>
-      ))}
+    <div className="product_container">
+      <img src={image} alt={name} />
+      <div className="details">
+        <h3>{name}</h3>
+        <p>{recipe}</p>
+        <button>Add to Cart</button>
+      </div>
     </div>
   );
 };

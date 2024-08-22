@@ -1,10 +1,21 @@
+import { useContext, useEffect } from "react";
 import "./ShopMenu.css";
+import { ShopMenuContext } from "../../../../assets/context/ShopMenuContext";
 
 const ShopMenu = () => {
-  const shopMenuList = ["salad", "pizza", "soups", "desserts", "drinks"];
+  const { setCategory } = useContext(ShopMenuContext);
+
+  const shopMenuList = [
+    "popular",
+    "salad",
+    "pizza",
+    "soup",
+    "dessert",
+    "offered",
+  ];
 
   const handleListMenu = (item) => {
-    console.log(item);
+    setCategory(item);
   };
 
   return (
