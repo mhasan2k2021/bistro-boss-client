@@ -1,4 +1,5 @@
 import OurShopImage from "./OurShopImage/OurShopImage";
+import Products from "./Products/Products";
 import ShopMenu from "./ShopMenu/ShopMenu";
 
 const OurShop = () => {
@@ -6,6 +7,7 @@ const OurShop = () => {
     <div>
       <OurShopImage></OurShopImage>
       <ShopMenu></ShopMenu>
+      <Products></Products>
     </div>
   );
 };

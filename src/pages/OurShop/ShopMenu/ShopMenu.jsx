@@ -1,15 +1,20 @@
-import { Link } from "react-router-dom";
 import "./ShopMenu.css";
 
 const ShopMenu = () => {
+  const shopMenuList = ["salad", "pizza", "soups", "desserts", "drinks"];
+
+  const handleListMenu = (item) => {
+    console.log(item);
+  };
+
   return (
     <div className="shop_menu_section">
       <ul>
-        <li>Salad</li>
-        <li>pizza</li>
-        <li>soups</li>
-        <li>desserts</li>
-        <li>drinks</li>
+        {shopMenuList.map((item, ind) => (
+          <li key={ind} onClick={() => handleListMenu(item)}>
+            {item}
+          </li>
+        ))}
       </ul>
     </div>
   );
