@@ -1,9 +1,10 @@
 import "./Contact.css";
+import Thumbnail from "./Thumbnail/Thumbnail";
 
 const Contact = () => {
   return (
     <div className="contact_container">
-      <h4>this is contact page.</h4>
+      <Thumbnail></Thumbnail>
     </div>
   );
 };
