@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
 import { useState } from "react";
 import { FaBars, FaX } from "react-icons/fa6";
@@ -75,8 +75,12 @@ const Navbar = () => {
               />
               <span>10</span>
             </div>
-            <button>Sign In</button>
-            <button>Sign Up</button>
+            <button>
+              <Link to={"/sign-in"}>Sign In</Link>
+            </button>
+            <button>
+              <Link to={"/sign-up"}>Sign Up</Link>
+            </button>
           </div>
         </div>
       </div>
