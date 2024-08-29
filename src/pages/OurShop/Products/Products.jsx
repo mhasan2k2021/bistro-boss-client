@@ -11,6 +11,7 @@ const Products = ({ product }) => {
       <div className="details">
         <h3>{name}</h3>
         <p>{recipe}</p>
+        <p>Price: {price}$</p>
         <button>Add to Cart</button>
       </div>
     </div>
