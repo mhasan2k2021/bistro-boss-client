@@ -1,19 +1,20 @@
 import { createContext, useEffect, useState } from "react";
-import { GiConsoleController } from "react-icons/gi";
 
 export const ShopMenuContext = createContext();
 
 const DataProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
   const [category, setCategory] = useState("popular");
+  const [loading, setLoading] = useState(false);
   // this is for loading all products.
 
   useEffect(() => {
-    fetch("../../../../public/products.json")
+    // fetch("../../../../public/products.json")
+    fetch(`http://localhost:5000/products/${category}`)
       .then((res) => res.json())
       .then((data) => {
-        const getData = data.filter((item) => item.category === category);
-        setProducts(getData);
+        console.log(data);
+        setProducts(data);
       });
   }, [category]);
 
@@ -23,7 +24,6 @@ const DataProvider = ({ children }) => {
   //     const getData = products.filter((item) => item.category === category);
   //     setProductCategory(getData);
   //   };
-  console.log(category);
 
   const data = { products, setCategory };
   return (

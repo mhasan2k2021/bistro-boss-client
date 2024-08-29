@@ -42,3 +42,11 @@
 .shop_menu_section ul li:hover::before {
   width: 100%;
 }
+
+.active {
+  color: #bb8506;
+}
+
+.shop_menu_section ul li.active::before {
+  width: 100%;
+}
