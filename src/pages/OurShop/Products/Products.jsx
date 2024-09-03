@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from "react";
-import { ShopMenuContext } from "../../../assets/context/ShopMenuContext";
 import "./Products.css";
 
 const Products = ({ product }) => {

@@ -1,7 +1,14 @@
 import React from "react";
 import "./SignIn.css";
-import Input from "../../../componets/Input/Input";
+
 import { FaFacebookF, FaGoogle, FaGithub } from "react-icons/fa6";
+import {
+  loadCaptchaEnginge,
+  LoadCanvasTemplate,
+  LoadCanvasTemplateNoReload,
+  validateCaptcha,
+} from "react-simple-captcha";
+import Input from "../../../componets/Input/Input";
 
 const SignIn = () => {
   const labelStyle = { fontSize: "14px" };

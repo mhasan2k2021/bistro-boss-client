@@ -5,7 +5,6 @@ export const ShopMenuContext = createContext();
 const DataProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
   const [category, setCategory] = useState("popular");
-  const [loading, setLoading] = useState(false);
   // this is for loading all products.
 
   useEffect(() => {

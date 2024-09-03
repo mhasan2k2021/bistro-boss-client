@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { ShopMenuContext } from "../../../../assets/context/ShopMenuContext";
+import { ShopMenuContext } from "../../../../context/ShopMenuContext";
 import Products from "../../Products/Products";
 import "./ProductsContainers.css";
 

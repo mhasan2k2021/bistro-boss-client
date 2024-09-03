@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import "./ShopMenu.css";
-import { ShopMenuContext } from "../../../../assets/context/ShopMenuContext";
+import { ShopMenuContext } from "../../../../context/ShopMenuContext";
 
 const ShopMenu = () => {
   const { setCategory } = useContext(ShopMenuContext);
