@@ -8,6 +8,7 @@ import OurShop from "../pages/OurShop/OurShop";
 import Salad from "../pages/OurShop/ShopMenu/Salad/Salad";
 import Pizza from "../pages/OurMenu/Pizza/Pizza";
 import SignIn from "../pages/OurMenu/SignIn/SignIn";
+import SignUp from "../pages/SignUp/SignUp";
 
 export const router = createBrowserRouter([
   {
@@ -43,5 +44,9 @@ export const router = createBrowserRouter([
   {
     path: "/sign-in",
     element: <SignIn></SignIn>,
+  },
+  {
+    path: "/sign-up",
+    element: <SignUp></SignUp>,
   },
 ]);
