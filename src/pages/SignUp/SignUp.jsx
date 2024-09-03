@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./SignUp.css";
 import { FaFacebookF, FaGoogle, FaGithub } from "react-icons/fa6";
 import Input from "../../componets/Input/Input";
+import { AuthContext } from "../../context/AuthProvider";
 
 const SignUp = () => {
   const labelStyle = { fontSize: "14px" };
   const style = { height: "35px", marginBottom: "10px" };
+  const { name } = useContext(AuthContext);
+  console.log(name);
   return (
     <div className="sing_up_page">
       <div className="sign_up_form_container">

@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./SignIn.css";
-
 import { FaFacebookF, FaGoogle, FaGithub } from "react-icons/fa6";
 import {
   loadCaptchaEnginge,
@@ -13,6 +12,13 @@ import Input from "../../../componets/Input/Input";
 const SignIn = () => {
   const labelStyle = { fontSize: "14px" };
   const style = { height: "35px", marginBottom: "10px" };
+
+  useEffect(() => {
+    loadCaptchaEnginge(6, "yellow");
+  }, []);
+
+  // this line we will try to get captcha match
+
   return (
     <div className="sing_in_page">
       <div className="sign_in_form_container">
@@ -36,18 +42,16 @@ const SignIn = () => {
               type={"password"}
               placeholder={"Enter your password"}
             ></Input>
-            <Input
-              labelStyle={labelStyle}
-              style={style}
-              placeholder={"Type here"}
-            ></Input>
-
-            <h4>Reload Captcha</h4>
+            {/* this line  we use react simple captcha */}
+            <div className="captcha">
+              <LoadCanvasTemplate reloadText="Reload" reloadColor="green" />
+            </div>
             <Input
               labelStyle={labelStyle}
               style={style}
               type={"text"}
               placeholder={"Type here"}
+              name={"captcha"}
             ></Input>
             <button>Sign In</button>
           </form>
