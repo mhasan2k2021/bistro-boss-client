@@ -1,10 +1,20 @@
 import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FaBars, FaX } from "react-icons/fa6";
+import { AuthContext } from "../../../context/AuthProvider";
 
 const Navbar = () => {
+  const { userSignOut, user } = useContext(AuthContext);
   const [isOpen, setOpen] = useState(false);
+
+  const handleSignOut = () => {
+    userSignOut()
+      .then(() => {
+        alert("User Sign Out");
+      })
+      .catch((error) => console.error(error));
+  };
   const navMenu = (
     <>
       <li>
@@ -75,12 +85,24 @@ const Navbar = () => {
               />
               <span>10</span>
             </div>
-            <button>
-              <Link to={"/sign-in"}>Sign In</Link>
-            </button>
-            <button>
-              <Link to={"/sign-up"}>Sign Up</Link>
-            </button>
+            <>
+              {!user ? (
+                <>
+                  <button>
+                    <Link to={"/sign-in"}>Sign In</Link>
+                  </button>
+                  <button>
+                    <Link to={"/sign-up"}>Sign Up</Link>
+                  </button>
+                </>
+              ) : (
+                <>
+                  <button onClick={handleSignOut}>
+                    <Link>Sign Out</Link>
+                  </button>
+                </>
+              )}
+            </>
           </div>
         </div>
       </div>
@@ -97,6 +119,24 @@ const Navbar = () => {
         </div>
         <ul className={`res_nav_list_container ${isOpen ? "open" : ""}`}>
           {navMenu}
+          <div className="responsive_sign">
+            {!user ? (
+              <>
+                <button>
+                  <Link to={"/sign-in"}>Sign In</Link>
+                </button>
+                <button>
+                  <Link to={"/sign-up"}>Sign Up</Link>
+                </button>
+              </>
+            ) : (
+              <>
+                <button onClick={handleSignOut}>
+                  <Link>Sign Out</Link>
+                </button>
+              </>
+            )}
+          </div>
         </ul>
       </div>
     </nav>

@@ -7,14 +7,35 @@ import { AuthContext } from "../../context/AuthProvider";
 const SignUp = () => {
   const labelStyle = { fontSize: "14px" };
   const style = { height: "35px", marginBottom: "10px" };
-  const { name } = useContext(AuthContext);
-  console.log(name);
+  const { userSignUp } = useContext(AuthContext);
+  const handleSignUpForm = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    userSignUp(email, password)
+      .then((result) => {
+        console.log(result.user);
+        form.reset();
+      })
+      .catch((error) => console.log(error.message));
+
+    console.log(email);
+  };
   return (
     <div className="sing_up_page">
       <div className="sign_up_form_container">
         <div className="sign_up_section">
-          <form>
-            <h3>Sign In</h3>
+          <form onSubmit={handleSignUpForm}>
+            <h3>Sign Up</h3>
+            <Input
+              labelStyle={labelStyle}
+              style={style}
+              label={"Name"}
+              name={"name"}
+              type={"text"}
+              placeholder={"Type here"}
+            ></Input>
             <Input
               labelStyle={labelStyle}
               style={style}
@@ -31,20 +52,8 @@ const SignUp = () => {
               type={"password"}
               placeholder={"Enter your password"}
             ></Input>
-            <Input
-              labelStyle={labelStyle}
-              style={style}
-              placeholder={"Type here"}
-            ></Input>
 
-            <h4>Reload Captcha</h4>
-            <Input
-              labelStyle={labelStyle}
-              style={style}
-              type={"text"}
-              placeholder={"Type here"}
-            ></Input>
-            <button>Sign In</button>
+            <button>Sign Up</button>
           </form>
           <div className="other_log_up">
             <p>Already registered? Go to log in</p>

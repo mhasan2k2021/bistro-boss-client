@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import "./SignIn.css";
 import { FaFacebookF, FaGoogle, FaGithub } from "react-icons/fa6";
 import {
@@ -8,14 +8,29 @@ import {
   validateCaptcha,
 } from "react-simple-captcha";
 import Input from "../../../componets/Input/Input";
+import { AuthContext } from "../../../context/AuthProvider";
 
 const SignIn = () => {
   const labelStyle = { fontSize: "14px" };
   const style = { height: "35px", marginBottom: "10px" };
+  const { userSignIn } = useContext(AuthContext);
 
   useEffect(() => {
     loadCaptchaEnginge(6, "yellow");
   }, []);
+
+  const handleSignIn = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    userSignIn(email, password)
+      .then((result) => {
+        const currentUser = result.user;
+        console.log(currentUser);
+      })
+      .catch((error) => console.error(error.message));
+  };
 
   // this line we will try to get captcha match
 
@@ -24,7 +39,7 @@ const SignIn = () => {
       <div className="sign_in_form_container">
         <img src="https://res.cloudinary.com/dcmgay3nl/image/upload/v1715603578/bistro-boss/others/authentication2_rkeeo3.png" />
         <div className="sign_in_section">
-          <form>
+          <form onSubmit={handleSignIn}>
             <h3>Sign In</h3>
             <Input
               labelStyle={labelStyle}
