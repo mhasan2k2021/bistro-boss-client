@@ -26,7 +26,7 @@ const SignUp = () => {
     <div className="sing_up_page">
       <div className="sign_up_form_container">
         <div className="sign_up_section">
-          <form onSubmit={handleSignUpForm}>
+          <form onSubmit={handleSignUpForm} className="sign_up_form">
             <h3>Sign Up</h3>
             <Input
               labelStyle={labelStyle}

@@ -39,7 +39,7 @@ const SignIn = () => {
       <div className="sign_in_form_container">
         <img src="https://res.cloudinary.com/dcmgay3nl/image/upload/v1715603578/bistro-boss/others/authentication2_rkeeo3.png" />
         <div className="sign_in_section">
-          <form onSubmit={handleSignIn}>
+          <form onSubmit={handleSignIn} className="sign_in_form">
             <h3>Sign In</h3>
             <Input
               labelStyle={labelStyle}

@@ -3,6 +3,7 @@ import "./Navbar.css";
 import { useContext, useState } from "react";
 import { FaBars, FaX } from "react-icons/fa6";
 import { AuthContext } from "../../../context/AuthProvider";
+import { FaUser } from "react-icons/fa6";
 
 const Navbar = () => {
   const { userSignOut, user } = useContext(AuthContext);
@@ -100,6 +101,17 @@ const Navbar = () => {
                   <button onClick={handleSignOut}>
                     <Link>Sign Out</Link>
                   </button>
+                  <div className="user_img">
+                    {user?.photoURL ? (
+                      <>
+                        <img src={user?.photoURL} alt="" />
+                      </>
+                    ) : (
+                      <>
+                        <FaUser />
+                      </>
+                    )}
+                  </div>
                 </>
               )}
             </>

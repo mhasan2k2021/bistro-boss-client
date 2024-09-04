@@ -94,3 +94,18 @@ form button {
   flex-direction: column;
   gap: 10px;
 }
+
+@media screen and (max-width: 480px) {
+  .sign_in_form_container {
+    width: 85%;
+    grid-template-columns: 1fr;
+    padding: 0 15px;
+  }
+  .sign_in_form {
+    width: 360px;
+  }
+
+  .sign_in_form_container > :first-child {
+    display: none;
+  }
+}
