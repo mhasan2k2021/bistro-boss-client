@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import "./SignIn.css";
 import { FaFacebookF, FaGoogle, FaGithub } from "react-icons/fa6";
 import {
@@ -14,6 +14,7 @@ const SignIn = () => {
   const labelStyle = { fontSize: "14px" };
   const style = { height: "35px", marginBottom: "10px" };
   const { userSignIn } = useContext(AuthContext);
+  const [errorText, setErrorText] = useState(false);
 
   useEffect(() => {
     loadCaptchaEnginge(6, "yellow");
@@ -24,12 +25,18 @@ const SignIn = () => {
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
-    userSignIn(email, password)
-      .then((result) => {
-        const currentUser = result.user;
-        console.log(currentUser);
-      })
-      .catch((error) => console.error(error.message));
+    const captcha = form.captcha.value;
+    console.log(validateCaptcha(captcha));
+    if (validateCaptcha(captcha) === true) {
+      userSignIn(email, password)
+        .then((result) => {
+          const currentUser = result.user;
+          console.log(currentUser);
+        })
+        .catch((error) => console.error(error.message));
+    } else {
+      setErrorText(true);
+    }
   };
 
   // this line we will try to get captcha match
@@ -48,6 +55,7 @@ const SignIn = () => {
               name={"email"}
               type={"email"}
               placeholder={"Type here"}
+              must={true}
             ></Input>
             <Input
               labelStyle={labelStyle}
@@ -68,6 +76,15 @@ const SignIn = () => {
               placeholder={"Type here"}
               name={"captcha"}
             ></Input>
+            {errorText ? (
+              <>
+                <div className="wrong_captcha">
+                  <small>Wrong captcha</small>
+                </div>
+              </>
+            ) : (
+              <div className="wrong_captcha"></div>
+            )}
             <button>Sign In</button>
           </form>
           <div className="other_log_in">

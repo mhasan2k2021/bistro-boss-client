@@ -94,6 +94,11 @@ form button {
   flex-direction: column;
   gap: 10px;
 }
+.wrong_captcha {
+  color: red;
+  text-align: left;
+  height: 15px;
+}
 
 @media screen and (max-width: 480px) {
   .sign_in_form_container {

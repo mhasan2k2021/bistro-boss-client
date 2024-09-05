@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./Rating.css";
 import { FaStar } from "react-icons/fa";
-import { BiColor } from "react-icons/bi";
 
 const Rating = () => {
   const [rating, setRating] = useState(null);

@@ -10,11 +10,19 @@ const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
 
   const handleSignOut = () => {
-    userSignOut()
-      .then(() => {
-        alert("User Sign Out");
-      })
-      .catch((error) => console.error(error));
+    const confirm = window.confirm("Do you want to sign out?");
+
+    console.log(confirm);
+
+    if (!confirm) {
+      return;
+    } else {
+      userSignOut()
+        .then(() => {
+          alert("User Sign Out");
+        })
+        .catch((error) => console.error(error));
+    }
   };
   const navMenu = (
     <>
