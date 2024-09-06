@@ -9,6 +9,8 @@ import Salad from "../pages/OurShop/ShopMenu/Salad/Salad";
 import Pizza from "../pages/OurMenu/Pizza/Pizza";
 import SignIn from "../pages/OurMenu/SignIn/SignIn";
 import SignUp from "../pages/SignUp/SignUp";
+import PrivetRoute from "./PrivetRoute";
+import OneProduct from "../pages/OurShop/OneProduct/OneProduct";
 
 export const router = createBrowserRouter([
   {
@@ -35,10 +37,14 @@ export const router = createBrowserRouter([
         path: "/our-shop",
         element: <OurShop></OurShop>,
       },
-      // {
-      //   path: "sign-in",
-      //   element: <SignIn></SignIn>,
-      // },
+      {
+        path: "/dish/:id",
+        element: (
+          <PrivetRoute>
+            <OneProduct></OneProduct>
+          </PrivetRoute>
+        ),
+      },
     ],
   },
   {
