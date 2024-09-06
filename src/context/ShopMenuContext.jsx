@@ -5,6 +5,7 @@ export const ShopMenuContext = createContext();
 const DataProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
   const [category, setCategory] = useState("popular");
+  const [addCart, setCart] = useState([]);
   // this is for loading all products.
 
   useEffect(() => {
@@ -12,7 +13,6 @@ const DataProvider = ({ children }) => {
     fetch(`http://localhost:5000/products/${category}`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setProducts(data);
       });
   }, [category]);

@@ -35,8 +35,6 @@ const AuthProvider = ({ children }) => {
     return signOut(auth);
   };
 
-  console.log(user);
-
   const info = { userSignUp, userSignIn, userSignOut, user };
   return <AuthContext.Provider value={info}>{children}</AuthContext.Provider>;
 };
