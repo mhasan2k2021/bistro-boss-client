@@ -6,8 +6,9 @@ import { ShopMenuContext } from "../../../context/ShopMenuContext";
 
 const Products = ({ product }) => {
   const { _id, name, recipe, image, category, price } = product;
-  const { user } = useContext(AuthContext);
-  const { setOneProduct } = useContext(ShopMenuContext);
+  const { user, setLoading } = useContext(AuthContext);
+  const { setOneProductId } = useContext(ShopMenuContext);
+
   const navigate = useNavigate();
 
   const handleAddCart = (_id) => {
@@ -16,12 +17,6 @@ const Products = ({ product }) => {
     } else {
       navigate("/sign-in");
     }
-  };
-
-  const showProduct = (product) => {
-    navigate(`/dish/${_id}`);
-    console.log("hello");
-    setOneProduct(_id);
   };
 
   return (
@@ -33,6 +28,7 @@ const Products = ({ product }) => {
         <p>Price: {price}$</p>
         <button
           onClick={(e) => {
+            e.preventDefault();
             e.stopPropagation();
             handleAddCart(_id);
           }}

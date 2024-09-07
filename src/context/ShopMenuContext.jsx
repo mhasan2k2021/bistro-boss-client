@@ -6,7 +6,7 @@ const DataProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
   const [category, setCategory] = useState("popular");
   const [addCart, setCart] = useState([]);
-  const [oneProduct, setOneProduct] = useState([]);
+
   // this is for loading all products.
 
   useEffect(() => {
@@ -25,7 +25,7 @@ const DataProvider = ({ children }) => {
   //     setProductCategory(getData);
   //   };
 
-  const data = { products, oneProduct, setOneProduct, setCategory };
+  const data = { products, setCategory };
   return (
     <ShopMenuContext.Provider value={data}>{children}</ShopMenuContext.Provider>
   );

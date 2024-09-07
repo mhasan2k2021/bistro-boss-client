@@ -1,20 +1,23 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./SignIn.css";
 import { FaFacebookF, FaGoogle, FaGithub } from "react-icons/fa6";
 import {
   loadCaptchaEnginge,
   LoadCanvasTemplate,
-  LoadCanvasTemplateNoReload,
   validateCaptcha,
 } from "react-simple-captcha";
 import Input from "../../../componets/Input/Input";
 import { AuthContext } from "../../../context/AuthProvider";
+import { useLoaderData, useLocation, useNavigate } from "react-router-dom";
 
 const SignIn = () => {
   const labelStyle = { fontSize: "14px" };
   const style = { height: "35px", marginBottom: "10px" };
   const { userSignIn } = useContext(AuthContext);
   const [errorText, setErrorText] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location?.state?.from?.pathname || "/";
 
   useEffect(() => {
     loadCaptchaEnginge(6, "yellow");
@@ -32,6 +35,8 @@ const SignIn = () => {
         .then((result) => {
           const currentUser = result.user;
           console.log(currentUser);
+          alert("Successfully Sign In. Thank You.");
+          navigate(from, { replace: true });
         })
         .catch((error) => console.error(error.message));
     } else {
