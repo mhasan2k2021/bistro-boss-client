@@ -3,6 +3,7 @@ import "./SignUp.css";
 import { FaFacebookF, FaGoogle, FaGithub } from "react-icons/fa6";
 import Input from "../../componets/Input/Input";
 import { AuthContext } from "../../context/AuthProvider";
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
   const labelStyle = { fontSize: "14px" };
@@ -77,7 +78,7 @@ const SignUp = () => {
             <button>Sign Up</button>
           </form>
           <div className="other_log_up">
-            <p>Already registered? Go to log in</p>
+            <Link to={"/sign-in"}>Already registered? Go to Sign In</Link>
             <p>Or sign up with</p>
             <div className="social_icon">
               <button>

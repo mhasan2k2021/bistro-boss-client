@@ -8,7 +8,12 @@ import {
 } from "react-simple-captcha";
 import Input from "../../../componets/Input/Input";
 import { AuthContext } from "../../../context/AuthProvider";
-import { useLoaderData, useLocation, useNavigate } from "react-router-dom";
+import {
+  Link,
+  useLoaderData,
+  useLocation,
+  useNavigate,
+} from "react-router-dom";
 
 const SignIn = () => {
   const labelStyle = { fontSize: "14px" };
@@ -93,7 +98,7 @@ const SignIn = () => {
             <button>Sign In</button>
           </form>
           <div className="other_log_in">
-            <p>New here? Create a New Account</p>
+            <Link to="/sign-up">New here? Create a New Account</Link>
             <p>Or sign in with</p>
             <div className="social_icon">
               <button>

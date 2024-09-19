@@ -51,7 +51,7 @@ form button {
   font-size: 18px;
 }
 
-.other_log_up p:nth-child(1) {
+.other_log_up a:nth-child(1) {
   font-size: 14px;
   color: #d1a054;
   font-weight: 400;
