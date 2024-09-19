@@ -5,7 +5,7 @@ export const ShopMenuContext = createContext();
 const DataProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
   const [category, setCategory] = useState("popular");
-  const [addCart, setCart] = useState([]);
+  const [addCart, setCart] = useState(null);
 
   // this is for loading all products.
 
@@ -25,7 +25,7 @@ const DataProvider = ({ children }) => {
   //     setProductCategory(getData);
   //   };
 
-  const data = { products, setCategory };
+  const data = { products, addCart, setCart, setCategory };
   return (
     <ShopMenuContext.Provider value={data}>{children}</ShopMenuContext.Provider>
   );

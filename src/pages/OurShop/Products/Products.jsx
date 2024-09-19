@@ -3,17 +3,27 @@ import "./Products.css";
 import { AuthContext } from "../../../context/AuthProvider";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import { ShopMenuContext } from "../../../context/ShopMenuContext";
+import axios, { Axios } from "axios";
 
 const Products = ({ product }) => {
-  const { _id, name, recipe, image, category, price } = product;
-  const { user, setLoading } = useContext(AuthContext);
-  const { setOneProductId } = useContext(ShopMenuContext);
+  const { _id, name, recipe, image, price } = product;
+  const { user } = useContext(AuthContext);
 
   const navigate = useNavigate();
 
-  const handleAddCart = (_id) => {
+  const handleAddCart = (product) => {
+    const oneProduct = {
+      name: product.name,
+      recipe: product.recipe,
+      image: product.image,
+      email: user.email,
+      price: product.price,
+    };
     if (user) {
-      console.log(_id);
+      console.log(typeof oneProduct);
+      axios
+        .post("http://localhost:5000/add-cart", oneProduct)
+        .then((response) => console.log(response.data));
     } else {
       navigate("/sign-in");
     }
@@ -26,11 +36,12 @@ const Products = ({ product }) => {
         <h3>{name}</h3>
         <p>{recipe}</p>
         <p>Price: {price}$</p>
+
         <button
           onClick={(e) => {
             e.preventDefault();
             e.stopPropagation();
-            handleAddCart(_id);
+            handleAddCart(product);
           }}
         >
           Add to Cart

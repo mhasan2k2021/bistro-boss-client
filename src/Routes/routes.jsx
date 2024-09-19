@@ -11,6 +11,7 @@ import SignIn from "../pages/OurMenu/SignIn/SignIn";
 import SignUp from "../pages/SignUp/SignUp";
 import PrivetRoute from "./PrivetRoute";
 import OneProduct from "../pages/OurShop/OneProduct/OneProduct";
+import AddCart from "../pages/AddCart/AddCart";
 
 export const router = createBrowserRouter([
   {
@@ -42,6 +43,14 @@ export const router = createBrowserRouter([
         element: (
           <PrivetRoute>
             <OneProduct></OneProduct>
+          </PrivetRoute>
+        ),
+      },
+      {
+        path: "/add-cart",
+        element: (
+          <PrivetRoute>
+            <AddCart></AddCart>
           </PrivetRoute>
         ),
       },

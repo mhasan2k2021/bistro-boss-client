@@ -7,15 +7,22 @@ import { AuthContext } from "../../context/AuthProvider";
 const SignUp = () => {
   const labelStyle = { fontSize: "14px" };
   const style = { height: "35px", marginBottom: "10px" };
-  const { userSignUp } = useContext(AuthContext);
+  const { userSignUp, userUpdate } = useContext(AuthContext);
   const handleSignUpForm = (e) => {
     e.preventDefault();
     const form = e.target;
+    const name = form.name.value;
+    const photoURL = form.photoURL.value;
     const email = form.email.value;
     const password = form.password.value;
     userSignUp(email, password)
       .then((result) => {
         console.log(result.user);
+        userUpdate(name, photoURL)
+          .then((result) => {
+            console.log(result);
+          })
+          .catch((error) => console.error(error.message));
         form.reset();
       })
       .catch((error) => console.log(error.message));
@@ -33,6 +40,14 @@ const SignUp = () => {
               style={style}
               label={"Name"}
               name={"name"}
+              type={"text"}
+              placeholder={"Type here"}
+            ></Input>
+            <Input
+              labelStyle={labelStyle}
+              style={style}
+              label={"Photo URL"}
+              name={"photoURL"}
               type={"text"}
               placeholder={"Type here"}
             ></Input>

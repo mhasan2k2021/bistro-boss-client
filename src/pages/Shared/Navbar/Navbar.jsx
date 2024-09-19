@@ -87,13 +87,13 @@ const Navbar = () => {
         <div className="menu-list">
           <ul>{navMenu}</ul>
           <div className="btn_container">
-            <div className="add_cart">
+            <Link to={"/add-cart"} className="add_cart">
               <img
                 src="https://res.cloudinary.com/dcmgay3nl/image/upload/v1715257568/bistro-boss/shopping_e3y15o.png"
                 alt=""
               />
               <span>10</span>
-            </div>
+            </Link>
             <>
               {!user ? (
                 <>
@@ -112,7 +112,7 @@ const Navbar = () => {
                   <div className="user_img">
                     {user?.photoURL ? (
                       <>
-                        <img src={user?.photoURL} alt="" />
+                        <img src={user?.photoURL} className="profile" />
                       </>
                     ) : (
                       <>
