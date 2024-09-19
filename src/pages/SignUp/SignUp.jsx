@@ -7,7 +7,8 @@ import { AuthContext } from "../../context/AuthProvider";
 const SignUp = () => {
   const labelStyle = { fontSize: "14px" };
   const style = { height: "35px", marginBottom: "10px" };
-  const { userSignUp, userUpdate } = useContext(AuthContext);
+  const { userSignUp, userUpdate, user } = useContext(AuthContext);
+
   const handleSignUpForm = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -15,19 +16,24 @@ const SignUp = () => {
     const photoURL = form.photoURL.value;
     const email = form.email.value;
     const password = form.password.value;
-    userSignUp(email, password)
-      .then((result) => {
-        console.log(result.user);
-        userUpdate(name, photoURL)
-          .then((result) => {
-            console.log(result);
-          })
-          .catch((error) => console.error(error.message));
-        form.reset();
-      })
-      .catch((error) => console.log(error.message));
+    if (user) {
+      alert(
+        `${user.displayName} already sign in. Please sign Out before create new account`
+      );
+      return;
+    } else {
+      userSignUp(email, password)
+        .then((result) => {
+          console.log(result.user);
+          userUpdate(name, photoURL)
+            .then((result) => {})
+            .catch((error) => console.error(error.message));
+          form.reset();
+        })
+        .catch((error) => console.log(error.message));
 
-    console.log(email);
+      alert(`Thank you Mr/Mrs ${name}. Successfully Sign Up`);
+    }
   };
   return (
     <div className="sing_up_page">

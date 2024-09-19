@@ -1,15 +1,15 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import "./Products.css";
 import { AuthContext } from "../../../context/AuthProvider";
-import { Link, Navigate, useNavigate } from "react-router-dom";
-import { ShopMenuContext } from "../../../context/ShopMenuContext";
-import axios, { Axios } from "axios";
+import { Link, useNavigate, useLocation } from "react-router-dom";
+import axios from "axios";
 
 const Products = ({ product }) => {
   const { _id, name, recipe, image, price } = product;
   const { user } = useContext(AuthContext);
 
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleAddCart = (product) => {
     const oneProduct = {
@@ -20,12 +20,11 @@ const Products = ({ product }) => {
       price: product.price,
     };
     if (user) {
-      console.log(typeof oneProduct);
       axios
         .post("http://localhost:5000/add-cart", oneProduct)
         .then((response) => console.log(response.data));
     } else {
-      navigate("/sign-in");
+      navigate("/sign-in", { state: { from: location } });
     }
   };
 
