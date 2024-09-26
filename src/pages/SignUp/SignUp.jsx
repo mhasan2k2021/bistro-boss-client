@@ -3,12 +3,13 @@ import "./SignUp.css";
 import { FaFacebookF, FaGoogle, FaGithub } from "react-icons/fa6";
 import Input from "../../componets/Input/Input";
 import { AuthContext } from "../../context/AuthProvider";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SignUp = () => {
   const labelStyle = { fontSize: "14px" };
   const style = { height: "35px", marginBottom: "10px" };
   const { userSignUp, userUpdate, user } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleSignUpForm = (e) => {
     e.preventDefault();
@@ -25,6 +26,7 @@ const SignUp = () => {
     } else {
       userSignUp(email, password)
         .then((result) => {
+          navigate("/");
           console.log(result.user);
           userUpdate(name, photoURL)
             .then((result) => {})
