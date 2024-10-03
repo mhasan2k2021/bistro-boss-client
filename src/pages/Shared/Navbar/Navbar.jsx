@@ -4,11 +4,12 @@ import { useContext, useEffect, useState } from "react";
 import { FaBars, FaX } from "react-icons/fa6";
 import { AuthContext } from "../../../context/AuthProvider";
 import { FaUser } from "react-icons/fa6";
+import useAddCart from "../../../componets/hook/useAddCart";
 
 const Navbar = () => {
   const { userSignOut, user } = useContext(AuthContext);
   const [isOpen, setOpen] = useState(false);
-  const [added, setAdded] = useState(0);
+  const [cart] = useAddCart();
 
   const handleSignOut = () => {
     const confirm = window.confirm("Do you want to sign out?");
@@ -88,12 +89,12 @@ const Navbar = () => {
         <div className="menu-list">
           <ul>{navMenu}</ul>
           <div className="btn_container">
-            <Link to={"/add-cart"} className="add_cart">
+            <Link to={"/dashboard/home"} className="add_cart">
               <img
                 src="https://res.cloudinary.com/dcmgay3nl/image/upload/v1715257568/bistro-boss/shopping_e3y15o.png"
                 alt=""
               />
-              <span>{added}</span>
+              <span>+{cart.length}</span>
             </Link>
             <>
               {!user ? (
