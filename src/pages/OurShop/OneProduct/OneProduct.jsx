@@ -16,6 +16,10 @@ const OneProduct = ({ product }) => {
       });
   }, [id]);
 
+  const handleAddCart = ({ product }) => {
+    console.log(product);
+  };
+
   return (
     <div className="one_product_page">
       <div className="one_product">
@@ -24,7 +28,7 @@ const OneProduct = ({ product }) => {
           <h3>{oneProduct.name}</h3>
           <p>{oneProduct.recipe}</p>
           <p>Price: {oneProduct.price}$</p>
-          <button>Add to Cart</button>
+          <button onClick={() => handleAddCart(product)}>Add to Cart</button>
         </div>
       </div>
     </div>

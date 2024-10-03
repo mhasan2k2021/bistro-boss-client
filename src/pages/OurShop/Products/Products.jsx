@@ -2,27 +2,36 @@ import React, { useContext } from "react";
 import "./Products.css";
 import { AuthContext } from "../../../context/AuthProvider";
 import { Link, useNavigate, useLocation } from "react-router-dom";
+
+import Swal from "sweetalert2";
 import axios from "axios";
 
 const Products = ({ product }) => {
   const { _id, name, recipe, image, price } = product;
-  const { user } = useContext(AuthContext);
 
+  // const axiosSecure = useAxiosSecure();
+  const { user } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
 
   const handleAddCart = (product) => {
     const oneProduct = {
-      name: product.name,
-      recipe: product.recipe,
-      image: product.image,
+      id: product._id,
       email: user.email,
-      price: product.price,
     };
+    console.log(oneProduct);
     if (user) {
       axios
         .post("http://localhost:5000/add-cart", oneProduct)
-        .then((response) => console.log(response.data));
+        .then((response) => {
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Successfully Add to Cart",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        });
     } else {
       navigate("/sign-in", { state: { from: location } });
     }

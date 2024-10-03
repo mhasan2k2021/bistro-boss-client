@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FaBars, FaX } from "react-icons/fa6";
 import { AuthContext } from "../../../context/AuthProvider";
 import { FaUser } from "react-icons/fa6";
@@ -8,6 +8,7 @@ import { FaUser } from "react-icons/fa6";
 const Navbar = () => {
   const { userSignOut, user } = useContext(AuthContext);
   const [isOpen, setOpen] = useState(false);
+  const [added, setAdded] = useState(0);
 
   const handleSignOut = () => {
     const confirm = window.confirm("Do you want to sign out?");
@@ -92,7 +93,7 @@ const Navbar = () => {
                 src="https://res.cloudinary.com/dcmgay3nl/image/upload/v1715257568/bistro-boss/shopping_e3y15o.png"
                 alt=""
               />
-              <span>10</span>
+              <span>{added}</span>
             </Link>
             <>
               {!user ? (
