@@ -26,10 +26,7 @@ export const router = createBrowserRouter([
         path: "/contact-us",
         element: <Contact></Contact>,
       },
-      {
-        path: "/dashboard",
-        element: <Dashboard></Dashboard>,
-      },
+      
       {
         path: "/our-menu",
         element: <OurMenu></OurMenu>,
@@ -66,5 +63,6 @@ export const router = createBrowserRouter([
   },
   {
     path: "/dashboard/home",
+    element: <Dashboard
   },
 ]);

@@ -44,14 +44,7 @@ const Navbar = () => {
           CONTACT US
         </NavLink>
       </li>
-      <li>
-        <NavLink
-          className={({ isActive }) => (isActive ? "active" : "")}
-          to={"/dashboard"}
-        >
-          DASHBOARD
-        </NavLink>
-      </li>
+
       <li>
         <NavLink
           className={({ isActive }) => (isActive ? "active" : "")}
