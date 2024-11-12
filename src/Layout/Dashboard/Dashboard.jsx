@@ -1,9 +1,12 @@
-import React from "react";
+import "./dashboardLayout.css";
+import { Outlet } from "react-router-dom";
+import Sidebar from "./Sidebar/Sidebar";
 
 const Dashboard = () => {
   return (
-    <div>
-      <h2>this is dashboard.</h2>
+    <div className="dashboard_layout">
+      <Sidebar />
+      <Outlet></Outlet>
     </div>
   );
 };

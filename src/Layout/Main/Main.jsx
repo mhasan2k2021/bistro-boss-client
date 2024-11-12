@@ -5,7 +5,7 @@ import ScrollTop from "../../componets/ScrollTop/ScrollTop";
 
 const Main = () => {
   return (
-    <div>
+    <div className="mx-auto max-w-screen-xl	">
       <ScrollTop />
       <Navbar />
       <Outlet></Outlet>

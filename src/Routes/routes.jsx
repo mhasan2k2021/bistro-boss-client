@@ -4,14 +4,13 @@ import Home from "../pages/Home/Home/Home";
 import Contact from "../pages/Contact/Contact";
 import OurMenu from "../pages/OurMenu/OurMenu";
 import OurShop from "../pages/OurShop/OurShop";
-import Salad from "../pages/OurShop/ShopMenu/Salad/Salad";
-import Pizza from "../pages/OurMenu/Pizza/Pizza";
 import SignIn from "../pages/OurMenu/SignIn/SignIn";
 import SignUp from "../pages/SignUp/SignUp";
 import PrivetRoute from "./PrivetRoute";
 import OneProduct from "../pages/OurShop/OneProduct/OneProduct";
 import AddCart from "../pages/AddCart/AddCart";
 import Dashboard from "../Layout/Dashboard/Dashboard";
+import MainDashboard from "../Layout/Dashboard/MainDashboard/MainDashboard";
 
 export const router = createBrowserRouter([
   {
@@ -64,5 +63,11 @@ export const router = createBrowserRouter([
   {
     path: "/dashboard/home",
     element: <Dashboard></Dashboard>,
+    children: [
+      {
+        path: "/dashboard/home",
+        element: <MainDashboard />,
+      },
+    ],
   },
 ]);

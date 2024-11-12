@@ -14,7 +14,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <QueryClientProvider client={queryClient}>
       <DataProvider>
         <React.StrictMode>
-          <div className="mx-auto max-w-screen-xl	">
+          <div>
             <RouterProvider router={router}></RouterProvider>
           </div>
         </React.StrictMode>
