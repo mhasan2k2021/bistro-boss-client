@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState } from "react";
+import useAxiosSecure from "../componets/hook/useAxiosSecure";
 
 export const ShopMenuContext = createContext();
 
@@ -10,12 +11,11 @@ const DataProvider = ({ children }) => {
   // this is for loading all products.
 
   useEffect(() => {
-    // fetch("../../../../public/products.json")
-    fetch(`http://localhost:5000/products/${category}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setProducts(data);
-      });
+    const axiosSecure = useAxiosSecure();
+    axiosSecure.get(`/products/${category}`).then((res) => {
+      console.log(res.data);
+      setProducts(res.data);
+    });
   }, [category]);
 
   //   this function for get specific data for menu

@@ -4,15 +4,24 @@ import "swiper/css";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Link } from "react-router-dom";
+import useAxiosSecure from "../../../../componets/hook/useAxiosSecure";
 
 const OrderSlider = () => {
   const [images, setImages] = useState([]);
+  const axiosSecure = useAxiosSecure();
 
   useEffect(() => {
-    fetch("../../../../../public/imgLink.json")
-      .then((res) => res.json())
-      .then((data) => setImages(data));
+    axiosSecure
+      .get("/top-menu")
+      .then((res) => {
+        console.log(res.data);
+        setImages(res.data);
+      })
+      .catch((err) => {
+        console.error("Error fetching top-menu:", err);
+      });
   }, []);
+
   return (
     <>
       <Swiper
@@ -42,10 +51,10 @@ const OrderSlider = () => {
         modules={[Pagination, Autoplay, Navigation]}
         className="mySwiper"
       >
-        {images.map((pic) => (
+        {images?.map((pic) => (
           <SwiperSlide className="img_container" key={pic.img}>
             <Link className="relative">
-              <img src={pic.img} alt="" />
+              <img src={pic.image} alt="" />
               <p>{pic.name}</p>
             </Link>
           </SwiperSlide>

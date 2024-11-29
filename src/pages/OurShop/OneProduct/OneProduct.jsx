@@ -8,7 +8,7 @@ const OneProduct = ({ product }) => {
   console.log(id);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/one-product/${id}`)
+    fetch(`https://bistro-boss-lyart-xi.vercel.app//one-product/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setOneProduct(data);

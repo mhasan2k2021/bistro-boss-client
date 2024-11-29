@@ -5,7 +5,7 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 
 import Swal from "sweetalert2";
 import useAddCart from "../../../componets/hook/useAddCart";
-import { useAxiosSecure } from "../../../componets/hook/useAxiosSecure";
+import useAxiosSecure from "../../../componets/hook/useAxiosSecure";
 
 const Products = ({ product }) => {
   const { _id, name, recipe, image, price } = product;
