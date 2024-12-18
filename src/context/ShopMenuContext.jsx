@@ -13,7 +13,6 @@ const DataProvider = ({ children }) => {
   useEffect(() => {
     const axiosSecure = useAxiosSecure();
     axiosSecure.get(`/products/${category}`).then((res) => {
-      console.log(res.data);
       setProducts(res.data);
     });
   }, [category]);

@@ -66,6 +66,14 @@
   border-radius: 50%;
   background-color: #d4a373;
   margin: 0 auto 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dashboard-profile-pic img {
+  width: 100%;
+  border-radius: 50%;
 }
 
 .dashboard-activity-card h4 {

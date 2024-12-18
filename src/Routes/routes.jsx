@@ -11,6 +11,8 @@ import OneProduct from "../pages/OurShop/OneProduct/OneProduct";
 import AddCart from "../pages/AddCart/AddCart";
 import Dashboard from "../Layout/Dashboard/Dashboard";
 import MainDashboard from "../Layout/Dashboard/MainDashboard/MainDashboard";
+import ReservationForm from "../Layout/Dashboard/ReservationForm/ReservationForm";
+import MyCart from "../Layout/Dashboard/MyCart/MyCart";
 
 export const router = createBrowserRouter([
   {
@@ -61,13 +63,25 @@ export const router = createBrowserRouter([
     element: <SignUp></SignUp>,
   },
   {
-    path: "/dashboard/home",
+    path: "/dashboard",
     element: <Dashboard></Dashboard>,
     children: [
       {
-        path: "/dashboard/home",
+        path: "/dashboard/user-home",
         element: <MainDashboard />,
       },
+      {
+        path: "/dashboard/reservation",
+        element: <ReservationForm />,
+      },
+      {
+        path: "/dashboard/my-cart",
+        element: <MyCart />,
+      },
     ],
+  },
+  {
+    path: "*",
+    element: <div>this page not found</div>,
   },
 ]);

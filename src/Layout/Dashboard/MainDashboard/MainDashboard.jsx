@@ -1,6 +1,11 @@
+import { useContext } from "react";
 import "./MainDashboard.css";
+import { AuthContext } from "../../../context/AuthProvider";
+import useAddCart from "../../../componets/hook/useAddCart";
 
 const MainDashboard = () => {
+  const { user } = useContext(AuthContext);
+  const [card] = useAddCart();
   return (
     <div className="dashboard-dashboard">
       <h2 className="dashboard-welcome">Hi, Welcome Back!</h2>
@@ -18,12 +23,14 @@ const MainDashboard = () => {
       </div>
       <div className="dashboard-profile-section">
         <div className="dashboard-profile-card">
-          <div className="dashboard-profile-pic"></div>
-          <h4>Awlad Hossain</h4>
+          <div className="dashboard-profile-pic">
+            <img src={user?.photoURL} alt="" />
+          </div>
+          <h4>{user?.displayName}</h4>
         </div>
         <div className="dashboard-activity-card">
           <h4>Your Activities</h4>
-          <p>Orders: 6</p>
+          <p>Orders: {card.length}</p>
           <p>Reviews: 2</p>
           <p>Bookings: 1</p>
           <p>Payment: 3</p>

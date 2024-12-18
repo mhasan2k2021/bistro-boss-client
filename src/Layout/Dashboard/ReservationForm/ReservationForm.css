@@ -1,0 +1,157 @@
+.reservation-container {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  padding: 20px;
+}
+
+.reservation-form {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h1,
+h2 {
+  color: #444;
+  margin-bottom: 20px;
+}
+
+form {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 600px;
+  width: 100%;
+}
+.reservation_input {
+  width: calc(100% / 3 - 10);
+  text-align: start;
+}
+
+.reservation_input label {
+  font-family: var(--font-family);
+  font-size: 16px;
+}
+
+input,
+select {
+  height: 40px;
+  font-size: 14px;
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  color: rgb(41, 41, 41);
+}
+
+.submit-btn {
+  background-color: #d4a373;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.name_email {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.name_email .reservation_input {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.name_email input {
+  width: 220px;
+}
+
+.name_email label {
+  font-size: 16px;
+}
+
+.submit-btn:hover {
+  background-color: #c18a5d;
+}
+
+.location-section {
+  text-align: center;
+}
+
+.location-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  background-color: #f3f3f3;
+}
+
+.location-info div {
+  flex: 1;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.location-info div svg {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  background-color: #c18a5d;
+  color: #fff;
+}
+
+.location-info span {
+  font-size: 30px;
+  color: #d4a373;
+}
+.info_details {
+  height: calc(100% - 20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.info_details p {
+  margin: 0;
+  padding: 0;
+}
+
+.info_details p:nth-child(1) {
+  font-size: 24px;
+  font-family: var(--font-family);
+  font-weight: 600;
+}
+
+.info_details p:nth-child(2) {
+  font-size: 16px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  color: #686868;
+}
+
+@media (max-width: 768px) {
+  .form-row div {
+    flex: 1 1 100%;
+  }
+
+  .location-info div {
+    flex: 1 1 100%;
+  }
+}
