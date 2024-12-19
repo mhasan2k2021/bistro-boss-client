@@ -20,6 +20,8 @@ const Products = ({ product }) => {
       const oneProduct = {
         id: product._id,
         email: user.email,
+        price: product.price,
+        name: product.name,
       };
       console.log(oneProduct);
       axiosSecure.post("/add-cart", oneProduct).then((response) => {

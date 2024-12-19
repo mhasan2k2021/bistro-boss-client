@@ -34,19 +34,15 @@ const SignIn = () => {
     const email = form.email.value;
     const password = form.password.value;
     const captcha = form.captcha.value;
-    console.log(validateCaptcha(captcha));
-    if (validateCaptcha(captcha) === true) {
-      userSignIn(email, password)
-        .then((result) => {
-          const currentUser = result.user;
-          console.log(currentUser);
-          alert("Successfully Sign In. Thank You.");
-          navigate(from, { replace: true });
-        })
-        .catch((error) => console.error(error.message));
-    } else {
-      setErrorText(true);
-    }
+
+    userSignIn(email, password)
+      .then((result) => {
+        const currentUser = result.user;
+        console.log(currentUser);
+        alert("Successfully Sign In. Thank You.");
+        navigate(from, { replace: true });
+      })
+      .catch((error) => console.error(error.message));
   };
 
   // this line we will try to get captcha match

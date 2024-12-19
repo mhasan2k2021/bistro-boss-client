@@ -10,6 +10,7 @@ const Navbar = () => {
   const { userSignOut, user } = useContext(AuthContext);
   const [isOpen, setOpen] = useState(false);
   const [cart] = useAddCart();
+  console.log(cart);
 
   const handleSignOut = () => {
     const confirm = window.confirm("Do you want to sign out?");

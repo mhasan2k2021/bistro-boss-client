@@ -1,0 +1,126 @@
+.cart-container {
+  margin: 20px auto;
+  max-width: 1000px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cart-header h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.cart-header span {
+  color: #444;
+}
+
+.pay-btn {
+  background-color: #c7984b;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pay-btn:hover {
+  background-color: #a57f38;
+}
+
+/* Table Styling */
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cart-table th,
+.cart-table td {
+  padding: 10px;
+  text-align: center;
+}
+
+.cart-table thead {
+  background-color: #d3a257;
+  color: white;
+}
+
+.cart-table tbody tr:nth-child(even) {
+  background-color: #ebe9e9;
+}
+
+.image-placeholder {
+  width: 40px;
+  height: 40px;
+  background-color: #ccc;
+  margin: auto;
+  border-radius: 4px;
+}
+
+.delete-btn {
+  background: #d3a257;
+  color: white;
+  border: none;
+  padding: 5px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.delete-btn:hover {
+  background: #f1bb6a;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .cart-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .cart-table thead {
+    display: none;
+  }
+
+  .cart-table,
+  .cart-table tbody,
+  .cart-table tr,
+  .cart-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .cart-table tr {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .cart-table td {
+    text-align: right;
+    padding: 5px;
+    position: relative;
+  }
+
+  .cart-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    color: #333;
+  }
+}
+
+@media (max-width: 480px) {
+  .pay-btn {
+    width: 100%;
+  }
+}
