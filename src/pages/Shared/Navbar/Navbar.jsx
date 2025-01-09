@@ -83,7 +83,7 @@ const Navbar = () => {
         <div className="menu-list">
           <ul>{navMenu}</ul>
           <div className="btn_container">
-            <Link to={"/dashboard/user-home"} className="add_cart">
+            <Link to={"/dashboard/my-cart"} className="add_cart">
               <img
                 src="https://res.cloudinary.com/dcmgay3nl/image/upload/v1715257568/bistro-boss/shopping_e3y15o.png"
                 alt=""
